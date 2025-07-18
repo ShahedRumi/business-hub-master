@@ -9,7 +9,6 @@ import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Contactus from './Components/ContactUS/Contactus';
-import AdminPanel from './Components/Admin/AdminPanel';
 import NorwayPermitServices from './Components/Services/Europe';
 import Hungary from './Components/Services/Asia';
 import PrivacyPolicy from './Components/Footer/Privacy';
@@ -19,6 +18,7 @@ import { persistor, store } from './Redux/Store/Store'; // Import both store and
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import ServicesComponent from './Components/Services/Services';
+import AdminMain from './Components/Admin Panel/admin-main';
 // import { ContactButton } from './Components/Add Modal/contact-modals';
 
 // Create browser router and configure routes
@@ -32,12 +32,11 @@ const router = createBrowserRouter([
       { path: 'europe', element: <NorwayPermitServices /> },
       { path: 'asia', element: <Hungary /> },
       { path: 'contact', element: <Contactus /> },
-      { path: 'admin', element: <AdminPanel /> },
       { path: 'privacy', element: <PrivacyPolicy /> },
       { path: 'login', element: <LoginPage /> },
       { path: 'register', element: <RegisterPage /> },
       { path: 'services', element: <ServicesComponent /> },
-      // { path: 'test', element: <ContactButton /> },
+      { path: 'admin', element: <AdminMain/> },
     ],
   },
 ]);

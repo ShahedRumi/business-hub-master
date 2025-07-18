@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { NavLink, useLocation } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { toggleThemeSuccess } from "../../Redux/ThemeSlice/themeSlice"
 import { Search, Menu, X, Calculator, ArrowRight, Users, Building2, Phone, TrendingUp, Settings, Sun, Moon, Clock,
@@ -344,7 +344,7 @@ export default function NavbarComponent() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span>Get Started</span>
+              <Link to='login'>Get Started</Link>
               <ArrowRight className="w-3 h-3" />
             </motion.button>
           </div>
